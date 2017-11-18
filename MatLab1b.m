@@ -1,5 +1,5 @@
 prompt = 'What are the total random numbers required? ';
-val = input(prompt)
+val = input(prompt);
 [U] = MatLab1(val);
 totalCase = val;
 favor = 0;
