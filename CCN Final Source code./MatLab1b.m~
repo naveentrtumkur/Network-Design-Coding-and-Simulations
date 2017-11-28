@@ -1,0 +1,41 @@
+prompt = 'What are the total random numbers required? ';
+val = input(prompt);
+[U] = MatLab1(val);
+totalCase = val;
+favor = 0;
+k=1;
+%disp(length(U));
+
+    for j=0.5:0.1:1
+        for i=1:length(U)
+    if (U(i)>=j) && (U(i)<=1.0)
+        favor = favor + 1;
+        %disp(favor);
+        prob(favor) = U(i);
+        %k = k + 1
+    %else
+     %   prob(i) = 0;
+    end
+    
+        end
+    X(k) = favo
+end
+disp(U);
+disp(favor);
+disp(totalCase);
+prob1 = favor/totalCase;
+
+fprintf('Probability, P(U>x) = %f',prob1);
+
+   %for i=1:val
+    %    (i) = rand();
+    %end
+
+%for i=1:favor
+%x(i) = prob(i);
+%y(i) = U(i);
+%end
+plot(prob)
+xlabel('Porbability of each value in U');
+ylabel('Probability Value in range 0.5 and 1.0');
+grid on;
