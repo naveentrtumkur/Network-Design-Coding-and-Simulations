@@ -1,6 +1,9 @@
-function X = Poisson(lambda) 
+%Poisson random variable generation using CDF and exponetial number.
 
-k=0.0; lambda = 2;
+function X = matlab2b(lambda) 
+
+k=0.0; 
+%lambda = 2;
     produ = rand();
     while produ >= exp(-lambda)
         produ = produ*rand();
