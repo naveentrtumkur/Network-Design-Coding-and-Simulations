@@ -1,11 +1,7 @@
  %% initialize
     sim_time = 0;               % Initialize simulation time
     % Initialize the state variables
- 
- 
- 
-  
- 
+
  
      server_status = 0;
 num_in_s = 0;

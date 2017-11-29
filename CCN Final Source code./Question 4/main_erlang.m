@@ -1,9 +1,12 @@
+%Clear the screen, values and start fresh.
+clear All;
 % The simulation of M/M/1 queueing system (QS) 
 %% Global parameters
 time_next_event(1:2) = 0;
 num_events = 2;
 mu = 6;
-mean_service_time = 1/mu;
+mean_service_time = 1/(mu);
+k = 4;
 limit_customers = 100;
 %system (whether admitted or blocked) which induce termination of the
 %simulation run
@@ -15,7 +18,7 @@ rho = lambda/mu;
 mean_interarrival = 1/lambda; % Average interarrival time between message
 %arrivals [sec];
 %% Initialize the system's parameters
-initialize;
+initialize_erlang;
 %% Main
 while total_of_customers-1 < limit_customers    
     % checks that the max number
@@ -31,14 +34,14 @@ timing;
    % Average message service time [sec]; 1/2 =
 % Maximum number of messages that arrive to the
 % update_time_avg_stats
-    update_time_avg_stats;
+    update_time_avg_stats_erlang;
     switch next_event_type
         case 1
-            arrive();
+            arrive_erlang();
         case 2
-            depart();
+            depart_erlang();
 end
     %total_of_customers
 end
 % report
-report;
+report_erlang;

@@ -25,7 +25,7 @@ else
     % Increment the number of customers delayed,
     % and schedule next departure.
     num_waiting_custs = num_waiting_custs + 1;
-    time_next_event(2) = sim_time + exprnd(mean_service_time);
+    time_next_event(2) = sim_time + erlang_ditribution(6,4);
     % Move each customer in queue (if any) up one place.
     for k = 1:num_in_q
         time_arrival_queue(k) = time_arrival_queue(k+1);
